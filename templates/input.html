@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<p class="sub-header">Input Location</p>
+<form action="/geocoding">
+  <input class="button input" placeholder="Latitude" type="text" name="input_lat">
+  <input class="button input" placeholder="Longtitude" type="text" name="input_lng">
+  <input class="button input" placeholder="Radius" type="text" name="input_radius">
+  <input class="button" type="submit" value="Submit">
+</form>

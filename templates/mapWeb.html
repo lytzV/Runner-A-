@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+<h1 class="header"> Nearby Streets </h1>
+{% for street in streets_json %}
+    <p>   {{name(street)}}---Length: {{street[distance]}}---Last Loc: {{street[last_coordinate]}}
+<!--{{street[elevation]}} [m]-->
+    </p>
+{% endfor %}
+<h2 class="header"> Closest Intersection </h2>
+<p> Street1: {{intersection_json[st1]}}& Street2: {{intersection_json[st2]}}---{{intersection[distance]}}</p>

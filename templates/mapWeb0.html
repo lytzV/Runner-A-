@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+<h1 class="header"> Nearby Intersections </h1>
+{% for intersection in intersections %}
+    <p>
+      Lat: {{intersection[lat]}} --- Lng: {{intersection[lng]}} *** Street1: {{intersection[street1]}} --- Street2: {{intersection[street2]}}
+    </p>
+{% endfor %}
+<h2 class="header"> Neighbour </h2>
+{% for n in neighbour %}
+    <p>
+      Intersections: {{n}} is neighbour with {{neighbour[n]}}
+    </p>
+{% endfor %}
+<h3 class="header"> Elevation </h3>
+{% for e in elevation %}
+    <p>
+      Intersections: {{e}} has an elevation of {{elevation[e]}}
+    </p>
+{% endfor %}
